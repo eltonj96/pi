@@ -1,3 +1,4 @@
+#define _USE_MATH_DEFINES
 #include<iostream>
 #include <cstdlib>
 #include<bits/stdc++.h> 
@@ -63,9 +64,9 @@ for(int i = 1 ; i <= trials ; i++)
 }
 double p_result = (( (6 * trials) / c_prime_count));
 double pi_result = sqrt(p_result);
-
+long double p_error = ((pi_result - M_PI)/(M_PI))*100;
 //std::cout << c_prime_count << " " << p_result << "\n";
 std::cout << "Pi is estimated to be "<<pi_result << "\n";
-std::cout << "Error : ";
+std::cout << "Error : " << p_error << " %\n";
 return 0;    
 }
